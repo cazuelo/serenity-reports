@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Selenium Serenity Tests FAD APPLIC</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="f57d69d58d26dcc4edbe9832bdb86bb5312e11945630352489446a68dca4335c.html">General Ledger Entries</a></span>
+                > <span class="truncate-60"><a
+                    href="7ce7838a0c6b4fd48c5b85769e8b09d9b470b79e32cc510d2ad4cedf05d5a194.html">Create general ledger entry </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 11-11-2022 14:55</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">General Ledger Entries </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Create general ledger entry
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="141edbc4e58a126a435e90ea171143ed612bd301f3de1b72044ea108ee28b1aa.png" title=" Given that I'm logged in to 'General Ledger Entry' page" width="1728"/>
+                <img src="141edbc4e58a126a435e90ea171143ed612bd301f3de1b72044ea108ee28b1aa.png" title=" When i open FAD URL" width="1728"/>
+                <img src="141edbc4e58a126a435e90ea171143ed612bd301f3de1b72044ea108ee28b1aa.png" title=" When i open page from sidebar menu: {General Ledger,General Ledger Entries}" width="1728"/>
+                <img src="4d56e0cee9f94af56403407fc298ab9106ebff7ede9c453cc5851dbab0408c94.png" title=" When i open page from sidebar menu: {General Ledger,General Ledger Entries}" width="1728"/>
+                <img src="9e4bcace1463331ea6a4fae3dbc4cdb0e471bd9dfae5b373704c3e76682dc9b4.png" title=" When i open page from sidebar menu: {General Ledger,General Ledger Entries}" width="1728"/>
+                <img src="62eec8e3bc1241c9beb6e03c825b5ad88801c748906a72d4e3054a2dab150eae.png" title=" When i open page from sidebar menu: {General Ledger,General Ledger Entries} (completed)" width="1728"/>
+                <img src="62eec8e3bc1241c9beb6e03c825b5ad88801c748906a72d4e3054a2dab150eae.png" title=" Given that I'm logged in to 'General Ledger Entry' page (completed)" width="1728"/>
+                <img src="62eec8e3bc1241c9beb6e03c825b5ad88801c748906a72d4e3054a2dab150eae.png" title=" Then the 'G/L Header Information' page should show up" width="1728"/>
+                <img src="2a56b3e212328afef25d944407310eab95365d6541f6c1d98f57c8d5a395ecea.png" title=" When I set the currency to 'USD'" width="1728"/>
+                <img src="71319a4eabdf1fc31c4adbda25475a55acd9baada0a6a344b871373736fbae47.png" title=" When I set the currency to 'USD' (completed)" width="1728"/>
+                <img src="29e244cbc8d96b81022342cdf53ea1486187f3e7d836945ac1e18e93cafd8b5d.png" title=" When I set the description to 'TEST1'" width="1728"/>
+                <img src="73406bc61d8343d760a8f1ae1055ff380938d3f034f5d6b3cc35d611722d18c6.png" title=" When I click 'Continue' button" width="1728"/>
+                <img src="73406bc61d8343d760a8f1ae1055ff380938d3f034f5d6b3cc35d611722d18c6.png" title=" When I click 'Continue' button (completed)" width="1728"/>
+                <img src="b32a0f0a849167aaae40024c7b56a5e820e25f3534e0a98d5bc55500dd86d56f.png" title=" Then the 'G/L Distribution' page should show up" width="1728"/>
+                <img src="e1c1b4184e258669ad3eff6f5ace86cc1bfd155f9c4d63602d3c6d0cbf345aef.png" title=" When I set the Account Number to '911000'" width="1728"/>
+                <img src="133ff1d0102f41d5c812b8ffbff23722e3d36735860654dd5a3a5ad520856b8e.png" title=" When I set the Account Number to '911000' (completed)" width="1728"/>
+                <img src="c07893eab4b6c1d7b8f07ca117f3c583d1d37314a0b9f86ea295e931cf2f1158.png" title=" When I set the Line Description to 'TEST1'" width="1728"/>
+                <img src="dd62330be0d1409a6eeef5ebb8e7744e04c634bbff26289a676598b5565d6092.png" title=" When I set the Amount to '1000'" width="1728"/>
+                <img src="db208bb2f357debb02356ab92dbae4c621e35e747e65327502e4c5d74c45b73c.png" title=" When I set the Employee to 'Taramarcaz'" width="1728"/>
+                <img src="ae1cbddaf06637e06d1db101a3d8422b8efef4f9c1fc5e99d8a4595f3e41b555.png" title=" When I set the Employee to 'Taramarcaz' (completed)" width="1728"/>
+                <img src="f8c7707c5f743532850d1ebd50c2e0e389bf53df0638a76d05363ddf042eacf9.png" title=" When I set the General Obj to 'AFGHAIG'" width="1728"/>
+                <img src="72d8a3facba73342989d2c702148818b4a0d61a66a64fa3ee9a3ef3e39699a35.png" title=" When I set the General Obj to 'AFGHAIG' (completed)" width="1728"/>
+                <img src="d8784ee5ff6b37bc42fcb870d398b4781ef78ab5f51abf6652b6f761b5f55f21.png" title=" When i click show next button" width="1728"/>
+                <img src="d8784ee5ff6b37bc42fcb870d398b4781ef78ab5f51abf6652b6f761b5f55f21.png" title=" When i click show next button (completed)" width="1728"/>
+                <img src="fbeac07a23240a59bfafffc92075332a3d85d39b4e6f9674bf5675c0d4d71ce6.png" title=" When I set the 'Project ID' to 'DEFAULT PROJECT'" width="1728"/>
+                <img src="832faa4f9938badebe426c860a0547330750e6e377774ac221dc5bfd23b745c5.png" title=" When I set the 'Project ID' to 'DEFAULT PROJECT' (completed)" width="1728"/>
+                <img src="7db8904e99e19a124bb2ec7416eefde429f86f458aaee0024ce8ae9b58948d26.png" title=" When I set the 'Line Ref' to 'DEFAULT PROJECT1'" width="1728"/>
+                <img src="8237329c852fd124aeb766af556ed546cc6cb445574ecf8f35a5dc30ca5298e0.png" title=" Then the project ID field should be empty" width="1728"/>
+                <img src="94f87944c26dba510bffd13bf3424b4a9c1a7ceeb9f9e9bbc84c819a3155b223.png" title=" When I set the 'Line Ref' to 'DEFAULT PROJECT1'" width="1728"/>
+                <img src="6b3f8430210244ff0c653419d32a95430479f0f5ad95231956a75418dffced6f.png" title=" When I set the 'Project ID' to 'DEFAULT PROJECT'" width="1728"/>
+                <img src="38dfb2db8b180eabc616265447862bdb239bf2abea5edf9386f99fec0a527fce.png" title=" When I set the 'Project ID' to 'DEFAULT PROJECT' (completed)" width="1728"/>
+                <img src="8d74bc244e7c971b64bdf705ed536965636a6a20272ba23c888a544dc617e700.png" title=" Then the line ref field should be empty" width="1728"/>
+                <img src="6f8c3851124842f6e29808bfe261761ad7f148a6542b3f0eb26e5525d401599c.png" title=" When I click the 'Select Cash' Button" width="1728"/>
+                <img src="6f8c3851124842f6e29808bfe261761ad7f148a6542b3f0eb26e5525d401599c.png" title=" When I click the 'Select Cash' Button (completed)" width="1728"/>
+                <img src="1bea4b8263b64e3c2d5749a7ae2c04cd44d4de489dc629677bbc70a56235a06f.png" title=" Then the 'Select CASH Account' modal should show up" width="1728"/>
+                <img src="4825006d374ad9c8e788e8cb2979fc38938e27f7ac48ff069bd4ee569134c009.png" title=" When I select first checkbox from 'Select Cash' modal" width="1728"/>
+                <img src="4825006d374ad9c8e788e8cb2979fc38938e27f7ac48ff069bd4ee569134c009.png" title=" When I select first checkbox from 'Select Cash' modal (completed)" width="1728"/>
+                <img src="cf8ab69773dc6fff5d2f9aee1c24ab0b913eaba05171ef2ded4f40e360e8c8c4.png" title=" When I click 'Submit' button" width="1728"/>
+                <img src="cf8ab69773dc6fff5d2f9aee1c24ab0b913eaba05171ef2ded4f40e360e8c8c4.png" title=" When I click 'Submit' button (completed)" width="1728"/>
+                <img src="98361001067e37f5bc3fb20c9bc6c77dc5c016dde9813247647bb23e2a81048b.png" title=" When I click 'Proceed' button" width="1728"/>
+                <img src="98361001067e37f5bc3fb20c9bc6c77dc5c016dde9813247647bb23e2a81048b.png" title=" When I click 'Proceed' button (completed)" width="1728"/>
+                <img src="22f202338911bc5e02e79573649bc8d245f23aa577aaea66115b06333e9ebc8b.png" title=" Then the 'General Ledger Entry successfully created' modal should show up: <span class='success-color'>SUCCESS</span>" width="1728"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>

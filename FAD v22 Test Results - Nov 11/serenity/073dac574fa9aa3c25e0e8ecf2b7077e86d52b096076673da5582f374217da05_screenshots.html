@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Selenium Serenity Tests FAD APPLIC</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="799cad7a8b0bc7a0b3e1699862a84d040577207f1ce4f08b8189b6ccbce5a6bf.html">Voucher Entries</a></span>
+                > <span class="truncate-60"><a
+                    href="073dac574fa9aa3c25e0e8ecf2b7077e86d52b096076673da5582f374217da05.html">Create voucher entry using sustainability accounts </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 11-11-2022 14:12</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Voucher Entries </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Create voucher entry using sustainability accounts
+                                    <span class="related-issue-title">(SPRINT7)</span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="8873448ce728fe6033241069b8e285078aa18eacfe65881a38ac8e796a970600.png" title=" Given that I'm logged in to Voucher Entry page" width="1728"/>
+                <img src="8873448ce728fe6033241069b8e285078aa18eacfe65881a38ac8e796a970600.png" title=" When i open FAD URL" width="1728"/>
+                <img src="8873448ce728fe6033241069b8e285078aa18eacfe65881a38ac8e796a970600.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry}" width="1728"/>
+                <img src="3dcadcc9f4701ab4009cc4010e44097bd3aba449a53af506970b13d29158129b.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry}" width="1728"/>
+                <img src="23a198f34a0f3a222984c280ea99cf235dc9de9eb6cc40debcdec0a5551c40ca.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry}" width="1728"/>
+                <img src="44d9e97020653ee27c930a9ab2c1fbc8714a4eda1a3009453c8b2efaa31022c8.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry}" width="1728"/>
+                <img src="10fdc08e02a53184d553880b3793a675cd09e4114b93cc96447195df0642168d.png" title=" When i open page from sidebar menu: {Accounts Payable,Voucher Entries,Voucher Entry} (completed)" width="1728"/>
+                <img src="10fdc08e02a53184d553880b3793a675cd09e4114b93cc96447195df0642168d.png" title=" Given that I'm logged in to Voucher Entry page (completed)" width="1728"/>
+                <img src="10fdc08e02a53184d553880b3793a675cd09e4114b93cc96447195df0642168d.png" title=" Then the Payment Information form and its contents should show up" width="1728"/>
+                <img src="da75215db08cf7c0e798341eac0e5ed871ecf39d32d66e5d5962ac666859da90.png" title=" When I set the Supplier to '133339'" width="1728"/>
+                <img src="57a95c28ed1563f5bd33a3f8e91789009e0bf361203870318ec276ee3fceb1fe.png" title=" When I set the Supplier to '133339' (completed)" width="1728"/>
+                <img src="a5f2338eb8ab351439c126e3de4b094a70a2a4fdfdb8d54dd806a940d6768c64.png" title=" When I set the 'Invouce Number' to '8jTT6dQVtD'" width="1728"/>
+                <img src="c87d494281e0ae2838cd26ec870e41b264fbf91ceff368361724827973db359c.png" title=" When I set the Currency to 'USD'" width="1728"/>
+                <img src="a5e831b45e83f98449892d0c9dd6db783b39afce6175a150cd13fa595c1c26ca.png" title=" When I set the Currency to 'USD' (completed)" width="1728"/>
+                <img src="037ad730e4ab47480be292e28a069c8bcfb224a3c5923f48b69966387d2401cf.png" title=" When i click on continue button" width="1728"/>
+                <img src="868339c37c2002669d18a1e661ed40acb58d163bb15248d1dfa9ce5bc1c8cb4e.png" title=" When i click on continue button (completed)" width="1728"/>
+                <img src="69e0e4ba5d8ce08b637d864597637f94bc79129242d81c762a222c254911ea0f.png" title=" When I select the first Bank Account and click 'Submit' button if modal exist" width="1728"/>
+                <img src="4a474ddda026a1712105db714008205595e4ad3b39738eedfba10fa8abaeeeef.png" title=" When I select the first Bank Account and click 'Submit' button if modal exist" width="1728"/>
+                <img src="c37fb252a1e4ca2c2f635e8cf8cf58f90b4f9d0056cf74b13a0b7ff2970a5430.png" title=" When I select the first Bank Account and click 'Submit' button if modal exist (completed)" width="1728"/>
+                <img src="bbbab291bd4385fe4177ecc28d7323f042600b671bd2b7df90dc727a1917783a.png" title=" When I set the Gross Amount to '10000'" width="1728"/>
+                <img src="b639d277eed93f11f429cadf70db11ba12178b902fbcf2e02e700887e24c0d32.png" title=" When I set the Payment Terms to '30'" width="1728"/>
+                <img src="d65f9fa7938ad49f73b2d04886e0e193ccf572822df47b64400a57cbfd91d57e.png" title=" When I set the Payment Terms to '30'" width="1728"/>
+                <img src="e68705e3e830f2ed4c011859172808e7d11a57a3f8190821de15e2598001b688.png" title=" When I set the Payment Terms to '30' (completed)" width="1728"/>
+                <img src="59662255ec32a5cf35ed2255d562ced8dd024b3176bc5d7e4778f206b00d7323.png" title=" When I set the Tax Area to 'KF7'" width="1728"/>
+                <img src="59662255ec32a5cf35ed2255d562ced8dd024b3176bc5d7e4778f206b00d7323.png" title=" When i click the last payment amount table row if its not editable" width="1728"/>
+                <img src="d94a3cb9fbff73d80d769e87edc2580244a79d816bdfbbc7310bf3e00f43fc37.png" title=" When I set the Tax Area to 'KF7'" width="1728"/>
+                <img src="9888240218155c2416b6d92643cc71e2423daf33f92d5bb9ddb9151560a73b91.png" title=" When I set the Tax Area to 'KF7'" width="1728"/>
+                <img src="710aaebb228ad49e4bc6170220c71a6d0fa2eca006f00269fee3f20d60fdc627.png" title=" When I set the Tax Area to 'KF7' (completed)" width="1728"/>
+                <img src="710aaebb228ad49e4bc6170220c71a6d0fa2eca006f00269fee3f20d60fdc627.png" title=" Then the tax amount of the first line should be filled out" width="1728"/>
+                <img src="df23a395f48ecc4cd84971366763955d8f5e1c5f05088db5484e971fabaf5f26.png" title=" When i click on continue button" width="1728"/>
+                <img src="13cc204f77b9b44306e07737bc16f01ee3681117ea78747601eee3b4f41dedb0.png" title=" When i click on continue button (completed)" width="1728"/>
+                <img src="e5e2ff7216e1e24557dfd648ab9f347e6603bade90f3b7d2d014ec8bf4b5d013.png" title=" Then the 'GL Distribution' form and its contents should show up" width="1728"/>
+                <img src="895497d8f145811be83ff1828c4005597d1adde72d20f4b3ae71abe7fd3adc3f.png" title=" When I fill up the last row line using Account Number: '960001', Line Description: 'TEST1', Amount: '1000', Cost Center: 'DAV2000', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '21'" width="1728"/>
+                <img src="895497d8f145811be83ff1828c4005597d1adde72d20f4b3ae71abe7fd3adc3f.png" title=" When I click the last 'Additional Lines' table row" width="1728"/>
+                <img src="4c5e21866c7cd357e255e40849a60019ea4b469ac2abfb3c442d6581ecaa97fd.png" title=" When I click the last 'Additional Lines' table row (completed)" width="1728"/>
+                <img src="4c5e21866c7cd357e255e40849a60019ea4b469ac2abfb3c442d6581ecaa97fd.png" title=" When I set the 'Account Number' to '960001'" width="1728"/>
+                <img src="cc8162a0b87c2c000f454f1c6383d49bccf87b737c7fc95a4ba0efcb30f7769f.png" title=" When I set the 'Account Number' to '960001'" width="1728"/>
+                <img src="03f45f6d69c6361697633cb1cb3cd71e7d7e69e8fde8e2a7dd25a0578e133d9d.png" title=" When I set the 'Account Number' to '960001' (completed)" width="1728"/>
+                <img src="03f45f6d69c6361697633cb1cb3cd71e7d7e69e8fde8e2a7dd25a0578e133d9d.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Consumption Period'" width="1728"/>
+                <img src="83d3d3417858411fbfd6795aedb38a37de680648f0270bac220c10d5a883a7a6.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Consumption Period' (completed)" width="1728"/>
+                <img src="83d3d3417858411fbfd6795aedb38a37de680648f0270bac220c10d5a883a7a6.png" title=" When I set the 'Line Description' to 'TEST1'" width="1728"/>
+                <img src="443f916caf94501f315ee0d1fe0c82fa14895f0ae275233cca0e48e8e2e0fa3b.png" title=" When I set the 'Line Description' to 'TEST1' (completed)" width="1728"/>
+                <img src="443f916caf94501f315ee0d1fe0c82fa14895f0ae275233cca0e48e8e2e0fa3b.png" title=" When I set the 'Amount' to '1000'" width="1728"/>
+                <img src="b1bc5d1290cff906f736acea5f245ff08d4aaebac2749714a03de8ee862610a2.png" title=" When I set the 'Amount' to '1000' (completed)" width="1728"/>
+                <img src="b1bc5d1290cff906f736acea5f245ff08d4aaebac2749714a03de8ee862610a2.png" title=" When I set the 'Cost Center' to 'DAV2000'" width="1728"/>
+                <img src="0a089900e2f4ba1bb03085838b9a8aaeabad30b16b88bb5f18bf4f6eeff38f49.png" title=" When I set the 'Cost Center' to 'DAV2000'" width="1728"/>
+                <img src="3bb6668f1b22d1db2854e248cbf631b78c6e785592a4090a4c2c08296d51570c.png" title=" When I set the 'Cost Center' to 'DAV2000' (completed)" width="1728"/>
+                <img src="3bb6668f1b22d1db2854e248cbf631b78c6e785592a4090a4c2c08296d51570c.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="6e88f1767a1eb8941d551256366ae8daa771edd365589d5a28a3bf507cee0486.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="3f97ae78c6b5bc9d6f7813faac64a7e90b0e24b0635783048259068b5b09b734.png" title=" When I set the 'Gen Obj' to 'AFGHAIG' (completed)" width="1728"/>
+                <img src="3f97ae78c6b5bc9d6f7813faac64a7e90b0e24b0635783048259068b5b09b734.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="9b48c92ed8167150a26a047930b41f4356522a6f82b692612b9a34f88e0a4ce2.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="4f98a915783884d8901c74ef37a1e855c9f0cf1313af733af1c54697c9eb4157.png" title=" When I click on 'Show Next' button (completed)" width="1728"/>
+                <img src="4f98a915783884d8901c74ef37a1e855c9f0cf1313af733af1c54697c9eb4157.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="b17482926bc337864b422f48a21b2ab6e6ff14585a384570d98484045dd82c77.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="680c70755b0cd6f349f72a3eba4c650a1fcaf7332451510cc86776bba66f985b.png" title=" When I set the 'AOE' to 'YAO' (completed)" width="1728"/>
+                <img src="680c70755b0cd6f349f72a3eba4c650a1fcaf7332451510cc86776bba66f985b.png" title=" When I set the 'Units' to '21'" width="1728"/>
+                <img src="bdb40e9bfd02c5ef40c3017f2fce0912746f636621b5f31051189c89b02fc754.png" title=" When I set the 'Units' to '21' (completed)" width="1728"/>
+                <img src="bdb40e9bfd02c5ef40c3017f2fce0912746f636621b5f31051189c89b02fc754.png" title=" Then the Unit of Measure should be set to 'Cubic Metre'" width="1728"/>
+                <img src="d50d6b32bf937d4594d1509100a0eb9f697d15e4d4dfb9842742d36c026393d9.png" title=" Then the Unit of Measure should be set to 'Cubic Metre' (completed)" width="1728"/>
+                <img src="d50d6b32bf937d4594d1509100a0eb9f697d15e4d4dfb9842742d36c026393d9.png" title=" When I set the 'AOE' to 'Test1'" width="1728"/>
+                <img src="aa695aa7f1f5e540299e43562c7e4f160ce0c5ffbe13ae120561c743ef6bdff3.png" title=" When I set the 'AOE' to 'Test1' (completed)" width="1728"/>
+                <img src="aa695aa7f1f5e540299e43562c7e4f160ce0c5ffbe13ae120561c743ef6bdff3.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="2d9bb5b960855b83751685b557814849d83e4068167f2ef91652949f3fd996fe.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="2d9bb5b960855b83751685b557814849d83e4068167f2ef91652949f3fd996fe.png" title=" When I click on 'Show Previous' button (completed)" width="1728"/>
+                <img src="2d9bb5b960855b83751685b557814849d83e4068167f2ef91652949f3fd996fe.png" title=" When I fill up the last row line using Account Number: '960001', Line Description: 'TEST1', Amount: '1000', Cost Center: 'DAV2000', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '21' (completed)" width="1728"/>
+                <img src="1674958bc7e851dfb26d5b35154e76074b9202bd5611cd7b7aaed0330220248d.png" title=" When I click 'Add Line' button" width="1728"/>
+                <img src="1674958bc7e851dfb26d5b35154e76074b9202bd5611cd7b7aaed0330220248d.png" title=" When I click 'Add Line' button (completed)" width="1728"/>
+                <img src="c4c32df9a3a5a79679f581bdf4c3ab4ff4a2640f967f8b6d0ab9de9a2cbae683.png" title=" When I fill up the last row line using Account Number: '960002', Line Description: 'TEST1', Amount: '1000', Cost Center: 'DAV2120', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '10'" width="1728"/>
+                <img src="c4c32df9a3a5a79679f581bdf4c3ab4ff4a2640f967f8b6d0ab9de9a2cbae683.png" title=" When I click the last 'Additional Lines' table row" width="1728"/>
+                <img src="f9e5dc1858918cc4052d7712e6fb7cad84350a0a606be6ca60fc78dca30c1a19.png" title=" When I click the last 'Additional Lines' table row (completed)" width="1728"/>
+                <img src="f9e5dc1858918cc4052d7712e6fb7cad84350a0a606be6ca60fc78dca30c1a19.png" title=" When I set the 'Account Number' to '960002'" width="1728"/>
+                <img src="1400c3a73822fea757dc64641b38926b361a2a2b59dd1c1d8f72eace9b8a029f.png" title=" When I set the 'Account Number' to '960002'" width="1728"/>
+                <img src="1044a02486c33f6e5118a919fb6db708c8bffa12c124affe22caaea2b3a5b732.png" title=" When I set the 'Account Number' to '960002' (completed)" width="1728"/>
+                <img src="1044a02486c33f6e5118a919fb6db708c8bffa12c124affe22caaea2b3a5b732.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Consumption Period'" width="1728"/>
+                <img src="b818ed9e8a86e65bf735aaa4cac4955ef94b2e4e5cfa32a3d55d350ce3d209da.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Consumption Period' (completed)" width="1728"/>
+                <img src="b818ed9e8a86e65bf735aaa4cac4955ef94b2e4e5cfa32a3d55d350ce3d209da.png" title=" When I set the 'Line Description' to 'TEST1'" width="1728"/>
+                <img src="4d294c63c747d8c80c05824c860228e22eda79587473d6bfff7429366a964673.png" title=" When I set the 'Line Description' to 'TEST1' (completed)" width="1728"/>
+                <img src="4d294c63c747d8c80c05824c860228e22eda79587473d6bfff7429366a964673.png" title=" When I set the 'Amount' to '1000'" width="1728"/>
+                <img src="9a780c944ba3216f34e551ace59de97e9633ae714156c8c5b684b58e13b30f0c.png" title=" When I set the 'Amount' to '1000' (completed)" width="1728"/>
+                <img src="9a780c944ba3216f34e551ace59de97e9633ae714156c8c5b684b58e13b30f0c.png" title=" When I set the 'Cost Center' to 'DAV2120'" width="1728"/>
+                <img src="cc16607b11c97b4a4eb16ff3932b616bb065f2fb95cd294b8151764adc4c0aac.png" title=" When I set the 'Cost Center' to 'DAV2120'" width="1728"/>
+                <img src="e08c8c8237d5caf9516dd202aba4a8478279a9c22073a42443e70d9fa6612103.png" title=" When I set the 'Cost Center' to 'DAV2120' (completed)" width="1728"/>
+                <img src="e08c8c8237d5caf9516dd202aba4a8478279a9c22073a42443e70d9fa6612103.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="794d578873ebe861f3eef6fd791cfe17c9186f2e210f5b54e14a99f5d05fba08.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="b4bf7e5ba3adf0cb4459ce29d478af8f68813f3fa28a457d6c5bc42a1306b8af.png" title=" When I set the 'Gen Obj' to 'AFGHAIG' (completed)" width="1728"/>
+                <img src="b4bf7e5ba3adf0cb4459ce29d478af8f68813f3fa28a457d6c5bc42a1306b8af.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="8072dd720c79527b01c5fcd781eda50d60763a7fec9bb95583a2e5b638101fca.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="fb2464804c08a07e79cfebdeadc4110494058269ac422150ceaf422e736ce8b6.png" title=" When I click on 'Show Next' button (completed)" width="1728"/>
+                <img src="fb2464804c08a07e79cfebdeadc4110494058269ac422150ceaf422e736ce8b6.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="010df54e3d7c27d7524cc858801a7d77b9dddd89032f28ed6297fbcb2304731b.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="959e335c62180ade7aa86f7dcd5df45bf75ebe93e3a2a0269ab3f0abde2d57fc.png" title=" When I set the 'AOE' to 'YAO' (completed)" width="1728"/>
+                <img src="959e335c62180ade7aa86f7dcd5df45bf75ebe93e3a2a0269ab3f0abde2d57fc.png" title=" When I set the 'Units' to '10'" width="1728"/>
+                <img src="67dd05d3434a4cf333263b5d232b6761e7e39046443ca8bff607592597958565.png" title=" When I set the 'Units' to '10' (completed)" width="1728"/>
+                <img src="67dd05d3434a4cf333263b5d232b6761e7e39046443ca8bff607592597958565.png" title=" Then the Unit of Measure should be set to 'Kilowatt Hour'" width="1728"/>
+                <img src="a7f4e223a645820a5da69a515b1da53a94f75bc5e9778a3e403d8ea0644ffecf.png" title=" Then the Unit of Measure should be set to 'Kilowatt Hour' (completed)" width="1728"/>
+                <img src="a7f4e223a645820a5da69a515b1da53a94f75bc5e9778a3e403d8ea0644ffecf.png" title=" When I set the 'AOE' to 'Test1'" width="1728"/>
+                <img src="4f4988b827604ddc1b5b0e06f3a9b3e766c65378150de7d910646ed2b8f28784.png" title=" When I set the 'AOE' to 'Test1' (completed)" width="1728"/>
+                <img src="4f4988b827604ddc1b5b0e06f3a9b3e766c65378150de7d910646ed2b8f28784.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="713ae14cccf33ceaf8f78c5aadf6faf93c8a0a6e8a04302278affaa94fc1e5c9.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="713ae14cccf33ceaf8f78c5aadf6faf93c8a0a6e8a04302278affaa94fc1e5c9.png" title=" When I click on 'Show Previous' button (completed)" width="1728"/>
+                <img src="713ae14cccf33ceaf8f78c5aadf6faf93c8a0a6e8a04302278affaa94fc1e5c9.png" title=" When I fill up the last row line using Account Number: '960002', Line Description: 'TEST1', Amount: '1000', Cost Center: 'DAV2120', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '10' (completed)" width="1728"/>
+                <img src="0fc12a6423e7c5ec5e968f414a45f8758d3ac93da8e3b47996e4b46ae59e5d03.png" title=" When I click 'Add Line' button" width="1728"/>
+                <img src="0fc12a6423e7c5ec5e968f414a45f8758d3ac93da8e3b47996e4b46ae59e5d03.png" title=" When I click 'Add Line' button (completed)" width="1728"/>
+                <img src="a49f7958a3435c90ba781752d5b7461207712719edabe0a57f361a96e876dbe6.png" title=" When I fill up the last row line using Account Number: '960003', Line Description: 'TEST1', Amount: '1000', Cost Center: 'AMM2100', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '30'" width="1728"/>
+                <img src="a49f7958a3435c90ba781752d5b7461207712719edabe0a57f361a96e876dbe6.png" title=" When I click the last 'Additional Lines' table row" width="1728"/>
+                <img src="3dd86a3931f5307a67b4431e11be8e447afdc6cfbf98416533cbe84220405662.png" title=" When I click the last 'Additional Lines' table row (completed)" width="1728"/>
+                <img src="3dd86a3931f5307a67b4431e11be8e447afdc6cfbf98416533cbe84220405662.png" title=" When I set the 'Account Number' to '960003'" width="1728"/>
+                <img src="d91a53049336b10fd7c529426ccb05596ebed78a3d5acce85da21f26dd937906.png" title=" When I set the 'Account Number' to '960003'" width="1728"/>
+                <img src="37ae41ba421f838d750e2ff810990c6049139986aeaed90c23c4d854fc16e703.png" title=" When I set the 'Account Number' to '960003' (completed)" width="1728"/>
+                <img src="37ae41ba421f838d750e2ff810990c6049139986aeaed90c23c4d854fc16e703.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Consumption Period'" width="1728"/>
+                <img src="e90a689077b223bbeaabd590c0206ef2410e2719eade17002ad1192a326b0608.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Consumption Period' (completed)" width="1728"/>
+                <img src="e90a689077b223bbeaabd590c0206ef2410e2719eade17002ad1192a326b0608.png" title=" When I set the 'Line Description' to 'TEST1'" width="1728"/>
+                <img src="ccc191ca5eeacb2a04f0a3bdffebccedf580c3574a769e387d59d88f04d3aa85.png" title=" When I set the 'Line Description' to 'TEST1' (completed)" width="1728"/>
+                <img src="ccc191ca5eeacb2a04f0a3bdffebccedf580c3574a769e387d59d88f04d3aa85.png" title=" When I set the 'Amount' to '1000'" width="1728"/>
+                <img src="7eb00861ec4a3c58cd99b0a6af41f45e35845baea62060427b5afbdb9fbd06cb.png" title=" When I set the 'Amount' to '1000' (completed)" width="1728"/>
+                <img src="7eb00861ec4a3c58cd99b0a6af41f45e35845baea62060427b5afbdb9fbd06cb.png" title=" When I set the 'Cost Center' to 'AMM2100'" width="1728"/>
+                <img src="cdf4b42a69bc4051398cd747da5b1b9f8106ec1520090db4bef2312c15327e47.png" title=" When I set the 'Cost Center' to 'AMM2100'" width="1728"/>
+                <img src="7d4f47bb375618afb5fe9cb85a067a6dffa855fb57a701a914f342c1e9484070.png" title=" When I set the 'Cost Center' to 'AMM2100' (completed)" width="1728"/>
+                <img src="7d4f47bb375618afb5fe9cb85a067a6dffa855fb57a701a914f342c1e9484070.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="ca2e355e11de908770849a7ca19c37c2f19aa43c498a57f47f5288db7e06b375.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="04958cefb6956b4af818a71f588a741461c826ed529b32c2973bed0912004de0.png" title=" When I set the 'Gen Obj' to 'AFGHAIG' (completed)" width="1728"/>
+                <img src="04958cefb6956b4af818a71f588a741461c826ed529b32c2973bed0912004de0.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="3b4da0e51bae0d9c6afe7d3ba23399754e94668424470dc405c93f4af495db3b.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="2ab69fd690256e9e0aa4f46a16609e3c52b94fa7b10a6c6ddd3c42ac746e6e4b.png" title=" When I click on 'Show Next' button (completed)" width="1728"/>
+                <img src="2ab69fd690256e9e0aa4f46a16609e3c52b94fa7b10a6c6ddd3c42ac746e6e4b.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="c53212a64adbb153fadd50d68411a3716dc19778d102a25ffe475298589054e7.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="5be29d7c63a0cbb545f07ac412b925e2753837922b6530de9b5f741bbfdab0e6.png" title=" When I set the 'AOE' to 'YAO' (completed)" width="1728"/>
+                <img src="5be29d7c63a0cbb545f07ac412b925e2753837922b6530de9b5f741bbfdab0e6.png" title=" When I set the 'Units' to '30'" width="1728"/>
+                <img src="e7419282f9a8e9b63d15afc29fabab5693b0530e415aeed340b3fe3bc26a8b36.png" title=" When I set the 'Units' to '30' (completed)" width="1728"/>
+                <img src="e7419282f9a8e9b63d15afc29fabab5693b0530e415aeed340b3fe3bc26a8b36.png" title=" Then the Unit of Measure should be set to 'Cubic Metre'" width="1728"/>
+                <img src="10116423af7c1b88b10e5a8fbc03be1c33c10a0ccf50ad7bff827d23c9c6260e.png" title=" Then the Unit of Measure should be set to 'Cubic Metre' (completed)" width="1728"/>
+                <img src="10116423af7c1b88b10e5a8fbc03be1c33c10a0ccf50ad7bff827d23c9c6260e.png" title=" When I set the 'AOE' to 'Test1'" width="1728"/>
+                <img src="b6a33804857b4b362e6aaa69b74c5ff030a24ac449197585f9a0846a76a1ba57.png" title=" When I set the 'AOE' to 'Test1' (completed)" width="1728"/>
+                <img src="b6a33804857b4b362e6aaa69b74c5ff030a24ac449197585f9a0846a76a1ba57.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="848f58af279bd8903c411fb3e98cb61ba377c50f54304ccdc8f77ae72b85e186.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="848f58af279bd8903c411fb3e98cb61ba377c50f54304ccdc8f77ae72b85e186.png" title=" When I click on 'Show Previous' button (completed)" width="1728"/>
+                <img src="848f58af279bd8903c411fb3e98cb61ba377c50f54304ccdc8f77ae72b85e186.png" title=" When I fill up the last row line using Account Number: '960003', Line Description: 'TEST1', Amount: '1000', Cost Center: 'AMM2100', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '30' (completed)" width="1728"/>
+                <img src="4894479594b4fb0c1c26f3b725386434dfbfee8e1117486c574087ea9a985cc2.png" title=" When I click 'Add Line' button" width="1728"/>
+                <img src="4894479594b4fb0c1c26f3b725386434dfbfee8e1117486c574087ea9a985cc2.png" title=" When I click 'Add Line' button (completed)" width="1728"/>
+                <img src="3f926c4e5343d99349360c9bbc4d5b72618b047a153075612c3c3a102321a4f3.png" title=" When I fill up the last row line using Account Number: '960004', Line Description: 'TEST1', Amount: '1000', Cost Center: 'DAM1000', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '40'" width="1728"/>
+                <img src="3f926c4e5343d99349360c9bbc4d5b72618b047a153075612c3c3a102321a4f3.png" title=" When I click the last 'Additional Lines' table row" width="1728"/>
+                <img src="9d4b0450690cfdf62e698f8daabc1bdd31e2b2f329d80ae42371474b3482de8d.png" title=" When I click the last 'Additional Lines' table row (completed)" width="1728"/>
+                <img src="9d4b0450690cfdf62e698f8daabc1bdd31e2b2f329d80ae42371474b3482de8d.png" title=" When I set the 'Account Number' to '960004'" width="1728"/>
+                <img src="23270b2fba0e3f9fbe2d5627d1555a41bbf469f1a5ede92c12bfee67aa2c6a6d.png" title=" When I set the 'Account Number' to '960004'" width="1728"/>
+                <img src="8b3372dc9eb78fc039bb9d95760e0e2c2ae2b42d9ff537c88b92968276d833c5.png" title=" When I set the 'Account Number' to '960004' (completed)" width="1728"/>
+                <img src="8b3372dc9eb78fc039bb9d95760e0e2c2ae2b42d9ff537c88b92968276d833c5.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Consumption Period'" width="1728"/>
+                <img src="6f7ef51e4c8ac3dd7a627b0e9c311fd61b149461914459428e26ffbd99b8709b.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Consumption Period' (completed)" width="1728"/>
+                <img src="6f7ef51e4c8ac3dd7a627b0e9c311fd61b149461914459428e26ffbd99b8709b.png" title=" When I set the 'Line Description' to 'TEST1'" width="1728"/>
+                <img src="b8a58801b9c24cd646f5b10b89623d3dc938b1b6b5b9b5000602e0bdd71e23ce.png" title=" When I set the 'Line Description' to 'TEST1' (completed)" width="1728"/>
+                <img src="b8a58801b9c24cd646f5b10b89623d3dc938b1b6b5b9b5000602e0bdd71e23ce.png" title=" When I set the 'Amount' to '1000'" width="1728"/>
+                <img src="2753b540e271e0a2f2b2909f05c2dea3d96f32ece4ad0c6bc3cd633ad2568117.png" title=" When I set the 'Amount' to '1000' (completed)" width="1728"/>
+                <img src="2753b540e271e0a2f2b2909f05c2dea3d96f32ece4ad0c6bc3cd633ad2568117.png" title=" When I set the 'Cost Center' to 'DAM1000'" width="1728"/>
+                <img src="eecef8448114b06540558abee1bcad9cd5445f34d60dddd7ac6beff81803c0ad.png" title=" When I set the 'Cost Center' to 'DAM1000'" width="1728"/>
+                <img src="de45de9af622f0ab59fb3de1b0356030686b6392c98ed894c1e62576149aae1c.png" title=" When I set the 'Cost Center' to 'DAM1000' (completed)" width="1728"/>
+                <img src="de45de9af622f0ab59fb3de1b0356030686b6392c98ed894c1e62576149aae1c.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="8f64f262e4bfe35e9eaaa04e9c64edcf55f1188d8d1fcacea1302f8f91d6d200.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="dbaabed9f5ac2714bc7b32076947a4c4d06482146dca5fff8806bb5ca316f2b4.png" title=" When I set the 'Gen Obj' to 'AFGHAIG' (completed)" width="1728"/>
+                <img src="dbaabed9f5ac2714bc7b32076947a4c4d06482146dca5fff8806bb5ca316f2b4.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="3b948ba5e3569b5a1c1d5e056d0a78c5b7aeb9399cb324d7b0d2038b3dfb7904.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="361b6187f00942a134218fe2efcb16e5c2d05a4c7d35dc97e6caf159437f52ac.png" title=" When I click on 'Show Next' button (completed)" width="1728"/>
+                <img src="361b6187f00942a134218fe2efcb16e5c2d05a4c7d35dc97e6caf159437f52ac.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="a427261283ec6d0091634c95110d5c865a13926b8c5f30ebc9ab53ea585864a1.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="f5dae15730601dc2a1661bb09d3734929ae863e385a22158bce7edc64a039d95.png" title=" When I set the 'AOE' to 'YAO' (completed)" width="1728"/>
+                <img src="f5dae15730601dc2a1661bb09d3734929ae863e385a22158bce7edc64a039d95.png" title=" When I set the 'Units' to '40'" width="1728"/>
+                <img src="5da3fede2e7a6b53db5002ff44685253890ff9d07b4529a29b53a31f63a8aead.png" title=" When I set the 'Units' to '40' (completed)" width="1728"/>
+                <img src="5da3fede2e7a6b53db5002ff44685253890ff9d07b4529a29b53a31f63a8aead.png" title=" Then the Unit of Measure should be set to 'Giga Calories'" width="1728"/>
+                <img src="0593cc8a08ddaf9577a302c11395c43a1f2d3023cb62ec8ccd7aa31bd0b48142.png" title=" Then the Unit of Measure should be set to 'Giga Calories' (completed)" width="1728"/>
+                <img src="0593cc8a08ddaf9577a302c11395c43a1f2d3023cb62ec8ccd7aa31bd0b48142.png" title=" When I set the 'AOE' to 'Test1'" width="1728"/>
+                <img src="d57ae609e871e2856ec7f540732b3be69345e6fd08deda14eef51b12023d3aff.png" title=" When I set the 'AOE' to 'Test1' (completed)" width="1728"/>
+                <img src="d57ae609e871e2856ec7f540732b3be69345e6fd08deda14eef51b12023d3aff.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="41792493b4fa4d3c2ebd445ac2986ae14fdf985385eb1d042a80bf328b046f3f.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="41792493b4fa4d3c2ebd445ac2986ae14fdf985385eb1d042a80bf328b046f3f.png" title=" When I click on 'Show Previous' button (completed)" width="1728"/>
+                <img src="41792493b4fa4d3c2ebd445ac2986ae14fdf985385eb1d042a80bf328b046f3f.png" title=" When I fill up the last row line using Account Number: '960004', Line Description: 'TEST1', Amount: '1000', Cost Center: 'DAM1000', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '40' (completed)" width="1728"/>
+                <img src="25ee472cba6e05d4a919bf28e0ee46e0c169d9f2b302e72d8e7f12fa59ae73f7.png" title=" When I click 'Add Line' button" width="1728"/>
+                <img src="25ee472cba6e05d4a919bf28e0ee46e0c169d9f2b302e72d8e7f12fa59ae73f7.png" title=" When I click 'Add Line' button (completed)" width="1728"/>
+                <img src="a3d86335c113f469f9935a465eef4338016902eced8d2e1cbca333e64f318bcf.png" title=" When I fill up the last row line using Account Number: '948001', Line Description: 'TEST1', Amount: '&lt;null&gt;', Cost Center: 'AMM2110', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '1'" width="1728"/>
+                <img src="a3d86335c113f469f9935a465eef4338016902eced8d2e1cbca333e64f318bcf.png" title=" When I click the last 'Additional Lines' table row" width="1728"/>
+                <img src="cfc8755c1a88eb1d25f8548c27d7df49cf5c2508f898fd1679f060a6345fd016.png" title=" When I click the last 'Additional Lines' table row (completed)" width="1728"/>
+                <img src="cfc8755c1a88eb1d25f8548c27d7df49cf5c2508f898fd1679f060a6345fd016.png" title=" When I set the 'Account Number' to '948001'" width="1728"/>
+                <img src="bfbcc5fc8baeaa3481253181dfac5f36351c0e5782311d94aeb9d3f41d611a46.png" title=" When I set the 'Account Number' to '948001'" width="1728"/>
+                <img src="e13418b275c91d3e724c37a56d185bd2decf2a8bdc6437d937a2201d9233c0b8.png" title=" When I set the 'Account Number' to '948001' (completed)" width="1728"/>
+                <img src="e13418b275c91d3e724c37a56d185bd2decf2a8bdc6437d937a2201d9233c0b8.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Paper Size/Delivery Date'" width="1728"/>
+                <img src="43b3957f3f56711f173e132f4c7a0aeae48e8b41ca483fbfd84642850c299d83.png" title=" Then the Line Description placeholder should be set to 'PREMISE CODE/Paper Size/Delivery Date' (completed)" width="1728"/>
+                <img src="43b3957f3f56711f173e132f4c7a0aeae48e8b41ca483fbfd84642850c299d83.png" title=" When I set the 'Line Description' to 'TEST1'" width="1728"/>
+                <img src="17f325acab754c64f8e0de28a635f4a8cd7c1d47bfcc4ffdb3e63999a73879e0.png" title=" When I set the 'Line Description' to 'TEST1' (completed)" width="1728"/>
+                <img src="7997215f52d43f51240e1a52bb20fd5b5bdccd109e5c015287581350bcafb127.png" title=" When I set the 'Amount' to '5090.91'" width="1728"/>
+                <img src="abafce591e8de88a6a8e58e34b62693661a4cafeb9dab0ab99fb3be46438c0fd.png" title=" When I set the 'Amount' to '5090.91' (completed)" width="1728"/>
+                <img src="abafce591e8de88a6a8e58e34b62693661a4cafeb9dab0ab99fb3be46438c0fd.png" title=" When I set the 'Cost Center' to 'AMM2110'" width="1728"/>
+                <img src="a1e714b53910793be180fe49b3291254a4c302edf3ffbfd00702c4c9201e0027.png" title=" When I set the 'Cost Center' to 'AMM2110'" width="1728"/>
+                <img src="02c35b24e59c75ef79760f841deac2ef207d9f124ac1c51afa8071152820211a.png" title=" When I set the 'Cost Center' to 'AMM2110' (completed)" width="1728"/>
+                <img src="02c35b24e59c75ef79760f841deac2ef207d9f124ac1c51afa8071152820211a.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="8c7c0d296b8b0f4c6c70bddb58feba99d77bd684a234ccf5fa316df5b6ac0586.png" title=" When I set the 'Gen Obj' to 'AFGHAIG'" width="1728"/>
+                <img src="c2ff13598605b218651f2a6829610b35d539782be46d83608f048d9d6747ab95.png" title=" When I set the 'Gen Obj' to 'AFGHAIG' (completed)" width="1728"/>
+                <img src="c2ff13598605b218651f2a6829610b35d539782be46d83608f048d9d6747ab95.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="30869ea2bd1bce79b4d24675626490cadd94c108fbce8df16bf688cfd2564fef.png" title=" When I click on 'Show Next' button" width="1728"/>
+                <img src="268cc371533f0a4657a99f196159a225cfe94619db87d7f2d6f737893ef088cb.png" title=" When I click on 'Show Next' button (completed)" width="1728"/>
+                <img src="268cc371533f0a4657a99f196159a225cfe94619db87d7f2d6f737893ef088cb.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="e5549be0ed868a9dd1663d07f255134107bc97564ba766965ea549d6e445428e.png" title=" When I set the 'AOE' to 'YAO'" width="1728"/>
+                <img src="8585660fc9441d8a586f33d2aee5f62090014be4c47fccd2cb999964d671fbac.png" title=" When I set the 'AOE' to 'YAO' (completed)" width="1728"/>
+                <img src="8585660fc9441d8a586f33d2aee5f62090014be4c47fccd2cb999964d671fbac.png" title=" When I set the 'Units' to '1'" width="1728"/>
+                <img src="c4797ea222dd6a0f28837be3080942d4f39ebae6c712a2ae57f6d9e199f41d78.png" title=" When I set the 'Units' to '1' (completed)" width="1728"/>
+                <img src="c4797ea222dd6a0f28837be3080942d4f39ebae6c712a2ae57f6d9e199f41d78.png" title=" Then the Unit of Measure should be set to 'Ream'" width="1728"/>
+                <img src="11169e4e6e5c89210066a1e6549b715fb2f2ccb67f3b2fc444916ff0737a9570.png" title=" Then the Unit of Measure should be set to 'Ream' (completed)" width="1728"/>
+                <img src="11169e4e6e5c89210066a1e6549b715fb2f2ccb67f3b2fc444916ff0737a9570.png" title=" When I set the 'AOE' to 'Test1'" width="1728"/>
+                <img src="c0f04088a04fa9d6508c1b9500f7f1badba91140b97721304b3f4bbf57fa22ea.png" title=" When I set the 'AOE' to 'Test1' (completed)" width="1728"/>
+                <img src="c0f04088a04fa9d6508c1b9500f7f1badba91140b97721304b3f4bbf57fa22ea.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="7102a64d3d18570d90282b2380ba3a9bd784230408e919c2ea339e261afeecb8.png" title=" When I click on 'Show Previous' button" width="1728"/>
+                <img src="7102a64d3d18570d90282b2380ba3a9bd784230408e919c2ea339e261afeecb8.png" title=" When I click on 'Show Previous' button (completed)" width="1728"/>
+                <img src="7102a64d3d18570d90282b2380ba3a9bd784230408e919c2ea339e261afeecb8.png" title=" When I fill up the last row line using Account Number: '948001', Line Description: 'TEST1', Amount: '&lt;null&gt;', Cost Center: 'AMM2110', Gen Obj: 'AFGHAIG', AOE: 'YAO', Line Ref: 'Test1', Units: '1' (completed)" width="1728"/>
+                <img src="d8c3aa828bcdd7bc6e216491321db7e14f4198ecd64fd5f92b30a846a3956b44.png" title=" When I click on 'Save' button" width="1728"/>
+                <img src="f41ac04a1e365cc490f1dda18b5bdb950a22ac2607dad344d0868bc319ff4fb3.png" title=" When I click on 'Save' button (completed)" width="1728"/>
+                <img src="1d7bd97b07b9a6663edc1bde0c9ca1268084b6e7e0df1e4e5711ea781eddb044.png" title=" Then the voucher entry successfully created modal and its contents should show up" width="1728"/>
+                <img src="1d7bd97b07b9a6663edc1bde0c9ca1268084b6e7e0df1e4e5711ea781eddb044.png" title=" Then the voucher entry successfully created modal should show up" width="1728"/>
+                <img src="1d7bd97b07b9a6663edc1bde0c9ca1268084b6e7e0df1e4e5711ea781eddb044.png" title=" Then the batch number from voucher entry successfully created modal should show up" width="1728"/>
+                <img src="06a3a5b141ebfa8de76350a997cbeec637fc9c8745b5b239b1cee908196f09e5.png" title=" Then the batch number from voucher entry successfully created modal should show up (completed)" width="1728"/>
+                <img src="06a3a5b141ebfa8de76350a997cbeec637fc9c8745b5b239b1cee908196f09e5.png" title=" Then the document number from voucher entry successfully created modal should show up" width="1728"/>
+                <img src="1fcbe82ef5d9b08360f028e55512ec2e1f157283029bfb02c8b6aa866239e180.png" title=" Then the document number from voucher entry successfully created modal should show up (completed)" width="1728"/>
+                <img src="1fcbe82ef5d9b08360f028e55512ec2e1f157283029bfb02c8b6aa866239e180.png" title=" Then the voucher entry successfully created modal and its contents should show up (completed): <span class='success-color'>SUCCESS</span>" width="1728"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>
