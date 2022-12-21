@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Selenium Serenity Tests FAD APPLIC</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="a4a6c224b2577fdc04b7d26c4d18e9f980394bd16d9e187a002c390dbf3abfb6.html">Manage Bank Account</a></span>
+                > <span class="truncate-60"><a
+                    href="86638911a39ebfb8603fde5e00be4f1f89479ba4c4dd01578c0988118ce01bc9.html">Manage bank account using GVAGL bank account </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-12-2022 20:10</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Manage Bank Account </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Manage bank account using GVAGL bank account
+                                    <span class="related-issue-title">(SPRINT7)</span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="dd581e4a88d7b33869bc024a1680118603fe847a87b212d445f6c9cac62debb7.png" title=" Given that im logged into manage bank account page" width="1728"/>
+                <img src="dd581e4a88d7b33869bc024a1680118603fe847a87b212d445f6c9cac62debb7.png" title=" When i open FAD URL" width="1728"/>
+                <img src="dd581e4a88d7b33869bc024a1680118603fe847a87b212d445f6c9cac62debb7.png" title=" When i open page from sidebar menu: {Supplier Management,Manage Bank Account}" width="1728"/>
+                <img src="1b0c8ad78e2b0de228ec0315c3388274db4c285771d090d6b68cb3df8bcaf2c8.png" title=" When i open page from sidebar menu: {Supplier Management,Manage Bank Account}" width="1728"/>
+                <img src="abdeb28464e76bebcd4055be7ed9ffc19e29340095531d1eb577c8d28601d08a.png" title=" When i open page from sidebar menu: {Supplier Management,Manage Bank Account}" width="1728"/>
+                <img src="b713abd5bf42baabb9a2bcdd6562540e768c5ba6da63a3f83ae2a19521c0d6bb.png" title=" When i open page from sidebar menu: {Supplier Management,Manage Bank Account} (completed)" width="1728"/>
+                <img src="b713abd5bf42baabb9a2bcdd6562540e768c5ba6da63a3f83ae2a19521c0d6bb.png" title=" Given that im logged into manage bank account page (completed)" width="1728"/>
+                <img src="b713abd5bf42baabb9a2bcdd6562540e768c5ba6da63a3f83ae2a19521c0d6bb.png" title=" Then the manage bank account page and its contents should show up" width="1728"/>
+                <img src="400bfa1efc51906b588e3c827b9f1191660a399298d843e93dfce6bd0a8920ff.png" title=" When I set the 'Supplier' to '54556'" width="1728"/>
+                <img src="15339df51aa80419dd5e477e56c68f57380b37712483bfcfb013f734af9df018.png" title=" When I set the 'Supplier' to '54556' (completed)" width="1728"/>
+                <img src="9023c2ea757286d2d74946ed3e58388c821355ebf46b819ded953889c6240072.png" title=" When i click search button" width="1728"/>
+                <img src="a83e0e10d49d579555936b35739c9e9b5a0a231a345fcdbe2912014a8a315a49.png" title=" When i click search button (completed)" width="1728"/>
+                <img src="b4824ee62355dfcff3bd350f55d3a1220d5daa8880e4de9b6968d012de0f473e.png" title=" Then a search result should show up" width="1728"/>
+                <img src="b4824ee62355dfcff3bd350f55d3a1220d5daa8880e4de9b6968d012de0f473e.png" title=" Then the bank account number of the first supplier bank account should have a value" width="1728"/>
+                <img src="b4824ee62355dfcff3bd350f55d3a1220d5daa8880e4de9b6968d012de0f473e.png" title=" When i save the bank account number of the first bank account from search result" width="1728"/>
+                <img src="411b0c846cae9ba79d8dbca8a1a683aa00dc5ec2d2c6abdb09c87b7ec97fad30.png" title=" When i click on edit button of the first supplier bank account" width="1728"/>
+                <img src="abf47d0dd24e106ab6d6b0baef98b269ce1f8b8b5365448979525da2445c40b4.png" title=" When i click on edit button of the first supplier bank account (completed)" width="1728"/>
+                <img src="7e41292ecd415c4827ba3a61926464e32e5161bbffb59801fc70d1a971c874e3.png" title=" Then the add bank account form should show up" width="1728"/>
+                <img src="7e41292ecd415c4827ba3a61926464e32e5161bbffb59801fc70d1a971c874e3.png" title=" Then the internal information accordion form should be opened" width="1728"/>
+                <img src="984e888d72c50d83c3168f10c5b4d2823adff427b36ca2fd8e461ab45d74725e.png" title=" When I set the 'GL Banck Account' to '1GVA400.410001'" width="1728"/>
+                <img src="1d0554aa5c5d011ca9e588122013ee35a9d6bbaf67a307bde71c0be1b48a53e9.png" title=" When I set the 'GL Banck Account' to '1GVA400.410001' (completed)" width="1728"/>
+                <img src="ed581f42d6a862903d1bf6df022e0d512459d11612e3f043ab014912961ee098.png" title=" When i click accordion continue button" width="1728"/>
+                <img src="ed581f42d6a862903d1bf6df022e0d512459d11612e3f043ab014912961ee098.png" title=" When i click accordion continue button (completed)" width="1728"/>
+                <img src="6f8cb5ce14103d0ee7a91323163d495bdc749d3c6e948f809114ccc806eb1475.png" title=" Then the beneficiary bank accordion form should be opened" width="1728"/>
+                <img src="f0d9b6f2194a3232a331140d7310e9370644c10be01dd4e18ef768b40b72fb82.png" title=" When I set the 'Swift Code' to 'AUBKPHMM'" width="1728"/>
+                <img src="58a6c4a8d8c3b89b3bc0653d10b7ac972ceef15496a121546ba7103d153f19ee.png" title=" When i click on validate button" width="1728"/>
+                <img src="a36b60cd2c853f87eacc8d9ee800506898b91a5359b3fe940906171f1ed0de72.png" title=" When i click on validate button (completed)" width="1728"/>
+                <img src="1508059f0f2529a219381f95a2a861d64093ef0a31f846c5e78aabac1fa3858b.png" title=" When I set the 'Bank Name' to 'Edited Bank Account Test Name'" width="1728"/>
+                <img src="6ee38d4ade52706fb96ea21841d3d4dfc8e825b3d0fb77b2b94e8ed6a85214dc.png" title=" When I set the 'Currency' to 'USD'" width="1728"/>
+                <img src="ab6034c60bd1af3cd1294e4ca5f46c57ef87e07aab04b55fa0e22f71a1c9e034.png" title=" When I set the 'Currency' to 'USD' (completed)" width="1728"/>
+                <img src="b11c897b472381c34634a5bc1467d946d0eaaf90e42c6fa9ea7f7e471c63c18a.png" title=" When I set the 'Customer Bank Account' to '1475920022'" width="1728"/>
+                <img src="bc37fab9d35bdb461982a78144238c530500d4a1163433cddb39f760add200c5.png" title=" When I set the 'Bank Address' to 'Makati'" width="1728"/>
+                <img src="b010d2547de92e1e129f920aca47e201370ff00fc0c8b13cd158f08bd76e8e31.png" title=" When I set the 'City' to 'Makati'" width="1728"/>
+                <img src="d5cff5778eab43745083ffecc18bb9cfe09393704fb5f2437c5d76cca00f874e.png" title=" When I set the 'Country' to 'Philippines'" width="1728"/>
+                <img src="b29e8bf1de3cc9866c18c7408228de8edbc6b22bc750e1c231e9c97d78b8b9f1.png" title=" When I set the 'Country' to 'Philippines' (completed)" width="1728"/>
+                <img src="90c838237ab574109fd82fe53fd69ea4e0e1736ad1d38d154e726a4e0cb14181.png" title=" When i click accordion continue button" width="1728"/>
+                <img src="90c838237ab574109fd82fe53fd69ea4e0e1736ad1d38d154e726a4e0cb14181.png" title=" When i click accordion continue button (completed)" width="1728"/>
+                <img src="e0a14842fca873f34359f95ba28c1e80d54b962e03986d0a71cf20ce1a25b8c7.png" title=" Then the payment instructions accordion form should be opened" width="1728"/>
+                <img src="bd7ad44ec2230794bbb3c9be9604f55ea8d25074dd8e150a9c6bf144de02e264.png" title=" When i click save button" width="1728"/>
+                <img src="7d0f17628dd09cfd962de36ecade8a2321a5aff994445d8974b603ee4bb35355.png" title=" When i click save button (completed)" width="1728"/>
+                <img src="7d0f17628dd09cfd962de36ecade8a2321a5aff994445d8974b603ee4bb35355.png" title=" Then the bank account edited successfully notification should show up" width="1728"/>
+                <img src="8ddf284a547b968b438216c073f170f618775955fe3c958695dc02d4ba80e4f5.png" title=" When I set the Bank Account Number to '1475920022'" width="1728"/>
+                <img src="cd34d6ed5f54ed52fc15d8f40a2fa9744bffd1102920c5f63267fe245d2a5163.png" title=" When i click search button" width="1728"/>
+                <img src="9729277ebc3b050bd3faf5755dcee4b50b05863be39e5a9131157faee630faca.png" title=" When i click search button (completed)" width="1728"/>
+                <img src="2470a8662c3aa761a1e4cba04cacacd4173f92ea9d1549e5cc5f33f1806e204b.png" title=" When i click on edit button of the first supplier bank account" width="1728"/>
+                <img src="f449300f974605cb944ad1640d839424a0b89acb68abe61db4fe8950e44b1b1b.png" title=" When i click on edit button of the first supplier bank account (completed)" width="1728"/>
+                <img src="595dea4abfecc648990778094e7821b5a7c6b0e59c3704aa47ad416c353e3a89.png" title=" Then the add bank account form should show up" width="1728"/>
+                <img src="595dea4abfecc648990778094e7821b5a7c6b0e59c3704aa47ad416c353e3a89.png" title=" Then the internal information accordion form should be opened" width="1728"/>
+                <img src="14b76b93db20b87fa0efa3d564506c033c465b5c7316647291ee0f697234c09c.png" title=" When I set the 'GL Banck Account' to '1GVA400.410002'" width="1728"/>
+                <img src="8ed62e05ff2b6f86806bee8b2868ad469c9f31401d677ab8ccefbf62746ac32a.png" title=" When I set the 'GL Banck Account' to '1GVA400.410002' (completed)" width="1728"/>
+                <img src="0172f44f4930cb074a10e5939eccb473913f7eb339bbe06a8e2cf686f75b3a02.png" title=" When i click accordion continue button" width="1728"/>
+                <img src="0172f44f4930cb074a10e5939eccb473913f7eb339bbe06a8e2cf686f75b3a02.png" title=" When i click accordion continue button (completed)" width="1728"/>
+                <img src="243a87a2319257897d990b9c8b53932a4cf2a3b62c6d211c4a76360c7a324e5e.png" title=" Then the beneficiary bank accordion form should be opened" width="1728"/>
+                <img src="b8b2ad0995f1eaf6696c3944e19c922d4360a44a90afd29999214eb34d80aba2.png" title=" When I set the 'Swift Code' to 'AUBKPHMM'" width="1728"/>
+                <img src="b8c6a19c98550bc206cbf65237db1101de1d658ed5b5c55dc15b3e3c4843f055.png" title=" When i click on validate button" width="1728"/>
+                <img src="a4be5e02435a063023a9fca9bfa9202e8851605b71ec40f6300b507c91408974.png" title=" When i click on validate button (completed)" width="1728"/>
+                <img src="0a7b621f9eaaee377754152f93a90ab7bebacc7734d39b3d7b91bfb798c97d8b.png" title=" When I set the 'Bank Name' to 'Edited Bank Account Test Name'" width="1728"/>
+                <img src="04002ec8cde4d55503b58bb92848859e0acdac118c6d6dc39459e923e33bb272.png" title=" When I set the 'Currency' to 'USD'" width="1728"/>
+                <img src="1c3efa7718205aeb3b6b4f52f560ad398b19cb19e1516e499daf549c429393ce.png" title=" When I set the 'Currency' to 'USD' (completed)" width="1728"/>
+                <img src="aa1ffd3ca6c5e10fe08ad5c860d4d43becd62abb3cc234c1497098871301b627.png" title=" When I set the 'Customer Bank Account' to '1475920022'" width="1728"/>
+                <img src="1db3b424d8f51d4045abc7da513423e701fce5fbdf0b6c6f1de9b2e7bad8ea32.png" title=" When I set the 'Bank Address' to 'Makati'" width="1728"/>
+                <img src="b010d2547de92e1e129f920aca47e201370ff00fc0c8b13cd158f08bd76e8e31.png" title=" When I set the 'City' to 'Makati'" width="1728"/>
+                <img src="b8d4d9bfc91de97c9e8b62aba2327fc58f2f6ae2b28762d67eb5130e97aefb8c.png" title=" When I set the 'Country' to 'Philippines'" width="1728"/>
+                <img src="b29e8bf1de3cc9866c18c7408228de8edbc6b22bc750e1c231e9c97d78b8b9f1.png" title=" When I set the 'Country' to 'Philippines' (completed)" width="1728"/>
+                <img src="90c838237ab574109fd82fe53fd69ea4e0e1736ad1d38d154e726a4e0cb14181.png" title=" When i click accordion continue button" width="1728"/>
+                <img src="90c838237ab574109fd82fe53fd69ea4e0e1736ad1d38d154e726a4e0cb14181.png" title=" When i click accordion continue button (completed)" width="1728"/>
+                <img src="8e9aa6dfaf8ac8b857f1e953330a6bce9d9aba6b7534b33283696a1686365fee.png" title=" Then the payment instructions accordion form should be opened" width="1728"/>
+                <img src="bd7ad44ec2230794bbb3c9be9604f55ea8d25074dd8e150a9c6bf144de02e264.png" title=" When i click save button" width="1728"/>
+                <img src="3ee1432ab18461a9cf00b3d7e674ebbc93b217f23e5fb5c7ebc71538626c07d0.png" title=" When i click save button (completed)" width="1728"/>
+                <img src="3ee1432ab18461a9cf00b3d7e674ebbc93b217f23e5fb5c7ebc71538626c07d0.png" title=" Then the bank account edited successfully notification should show up" width="1728"/>
+                <img src="9877ec96f8a94553007557d1126e596d66415e5532bafc36e9fa9da82c076b53.png" title=" When I set the Bank Account Number to '1475920022'" width="1728"/>
+                <img src="2b5a316a2a0e01564b355066e5f64ef52fb82666e7230ef5de18a1126611975e.png" title=" When i click search button" width="1728"/>
+                <img src="9729277ebc3b050bd3faf5755dcee4b50b05863be39e5a9131157faee630faca.png" title=" When i click search button (completed)" width="1728"/>
+                <img src="2470a8662c3aa761a1e4cba04cacacd4173f92ea9d1549e5cc5f33f1806e204b.png" title=" When i click on edit button of the first supplier bank account" width="1728"/>
+                <img src="14cc758038aaf544d800356b9540359ce78c1a46152bf8f09a7b99ff92dc7bec.png" title=" When i click on edit button of the first supplier bank account (completed)" width="1728"/>
+                <img src="81fa058c00d2f60a26b09f28481d86d79091c5610554988ca1583dc17bd59643.png" title=" Then the add bank account form should show up" width="1728"/>
+                <img src="81fa058c00d2f60a26b09f28481d86d79091c5610554988ca1583dc17bd59643.png" title=" Then the internal information accordion form should be opened" width="1728"/>
+                <img src="26d6920b595606763217be7e4474fb26865a06c55a972b2a0d5de8f8992db9d1.png" title=" When I set the 'GL Banck Account' to '1GVA400.410003'" width="1728"/>
+                <img src="7e5cbc26312038663483c70855fb2f73d7844c6148ef6f1c6c5cc5c335a7f059.png" title=" When I set the 'GL Banck Account' to '1GVA400.410003' (completed)" width="1728"/>
+                <img src="0172f44f4930cb074a10e5939eccb473913f7eb339bbe06a8e2cf686f75b3a02.png" title=" When i click accordion continue button" width="1728"/>
+                <img src="0172f44f4930cb074a10e5939eccb473913f7eb339bbe06a8e2cf686f75b3a02.png" title=" When i click accordion continue button (completed)" width="1728"/>
+                <img src="243a87a2319257897d990b9c8b53932a4cf2a3b62c6d211c4a76360c7a324e5e.png" title=" Then the beneficiary bank accordion form should be opened" width="1728"/>
+                <img src="7f4fb830ef73fe7f4c499e50be71474ec103b8d38179f5f71dcd350dd17212ba.png" title=" When I set the 'Swift Code' to 'AUBKPHMM'" width="1728"/>
+                <img src="b8c6a19c98550bc206cbf65237db1101de1d658ed5b5c55dc15b3e3c4843f055.png" title=" When i click on validate button" width="1728"/>
+                <img src="7459ed9acc35315945a5d1274f332c20580cf2383950108a841586ac72548489.png" title=" When i click on validate button (completed)" width="1728"/>
+                <img src="0a7b621f9eaaee377754152f93a90ab7bebacc7734d39b3d7b91bfb798c97d8b.png" title=" When I set the 'Bank Name' to 'Edited Bank Account Test Name'" width="1728"/>
+                <img src="43dbd8c0c8334229aff725dd2483009d464b23a8d66685c0dca38f16ef75c0a7.png" title=" When I set the 'Currency' to 'USD'" width="1728"/>
+                <img src="1c3efa7718205aeb3b6b4f52f560ad398b19cb19e1516e499daf549c429393ce.png" title=" When I set the 'Currency' to 'USD' (completed)" width="1728"/>
+                <img src="94e597afe66fe17b7a492a9a222b64c7ae4ed4cfcd62e935b728e3fabb207f33.png" title=" When I set the 'Customer Bank Account' to '1475920022'" width="1728"/>
+                <img src="ce4897762c8e0e7819b8ed1955c05968a1f0c206c8f012feb61fc75047d75060.png" title=" When I set the 'Bank Address' to 'Makati'" width="1728"/>
+                <img src="236d0e641a03e4e393257450ee09691a3199230cdc053007728750cf9f6bc677.png" title=" When I set the 'City' to 'Makati'" width="1728"/>
+                <img src="3e3f475eb1ce991c7d8964ce71d567125f6d41e0d4a7bd5fdd26c823a2ed3464.png" title=" When I set the 'Country' to 'Philippines'" width="1728"/>
+                <img src="b29e8bf1de3cc9866c18c7408228de8edbc6b22bc750e1c231e9c97d78b8b9f1.png" title=" When I set the 'Country' to 'Philippines' (completed)" width="1728"/>
+                <img src="90c838237ab574109fd82fe53fd69ea4e0e1736ad1d38d154e726a4e0cb14181.png" title=" When i click accordion continue button" width="1728"/>
+                <img src="90c838237ab574109fd82fe53fd69ea4e0e1736ad1d38d154e726a4e0cb14181.png" title=" When i click accordion continue button (completed)" width="1728"/>
+                <img src="8e9aa6dfaf8ac8b857f1e953330a6bce9d9aba6b7534b33283696a1686365fee.png" title=" Then the payment instructions accordion form should be opened" width="1728"/>
+                <img src="bd7ad44ec2230794bbb3c9be9604f55ea8d25074dd8e150a9c6bf144de02e264.png" title=" When i click save button" width="1728"/>
+                <img src="3ee1432ab18461a9cf00b3d7e674ebbc93b217f23e5fb5c7ebc71538626c07d0.png" title=" When i click save button (completed)" width="1728"/>
+                <img src="3ee1432ab18461a9cf00b3d7e674ebbc93b217f23e5fb5c7ebc71538626c07d0.png" title=" Then the bank account edited successfully notification should show up" width="1728"/>
+                <img src="9877ec96f8a94553007557d1126e596d66415e5532bafc36e9fa9da82c076b53.png" title=" When I set the Bank Account Number to '1475920022'" width="1728"/>
+                <img src="2b5a316a2a0e01564b355066e5f64ef52fb82666e7230ef5de18a1126611975e.png" title=" When i click search button" width="1728"/>
+                <img src="9729277ebc3b050bd3faf5755dcee4b50b05863be39e5a9131157faee630faca.png" title=" When i click search button (completed)" width="1728"/>
+                <img src="fa0e73e54034d2ef6d0ee78f0d2ea4f045d1e7b5d271dfc8d2df5bcd33bff9f4.png" title=" When i click on edit button of the first supplier bank account" width="1728"/>
+                <img src="0c0c0e19770baad214a69f1b5070b8f7fb495d09514a2a0930221ac1c6b12abd.png" title=" When i click on edit button of the first supplier bank account (completed)" width="1728"/>
+                <img src="b70aa4cdd485df7eb4d0124814d64871334f91218e2053d8fd128de815c30c2b.png" title=" Then the add bank account form should show up" width="1728"/>
+                <img src="b70aa4cdd485df7eb4d0124814d64871334f91218e2053d8fd128de815c30c2b.png" title=" Then the internal information accordion form should be opened" width="1728"/>
+                <img src="b32d5d78d810aad6e342acabde5b32c8c122d10ec6ad5f9c2c5d13100bc4211b.png" title=" When I set the 'GL Banck Account' to '1GVA400.410004'" width="1728"/>
+                <img src="723fc0a5f7001bc1495896e125b03013231887b08e215c7208297511b7f19dc3.png" title=" When I set the 'GL Banck Account' to '1GVA400.410004' (completed)" width="1728"/>
+                <img src="0172f44f4930cb074a10e5939eccb473913f7eb339bbe06a8e2cf686f75b3a02.png" title=" When i click accordion continue button" width="1728"/>
+                <img src="0172f44f4930cb074a10e5939eccb473913f7eb339bbe06a8e2cf686f75b3a02.png" title=" When i click accordion continue button (completed)" width="1728"/>
+                <img src="490b60350f2e75297d9c7c7fe1d4bb69e1540a144f8181f33ba2392de0605329.png" title=" Then the beneficiary bank accordion form should be opened" width="1728"/>
+                <img src="7f4fb830ef73fe7f4c499e50be71474ec103b8d38179f5f71dcd350dd17212ba.png" title=" When I set the 'Swift Code' to 'AUBKPHMM'" width="1728"/>
+                <img src="b8c6a19c98550bc206cbf65237db1101de1d658ed5b5c55dc15b3e3c4843f055.png" title=" When i click on validate button" width="1728"/>
+                <img src="faa563482ece33da3a94ce4cfe5082160381818d135517b4510fc7f827bf7ec5.png" title=" When i click on validate button (completed)" width="1728"/>
+                <img src="0a7b621f9eaaee377754152f93a90ab7bebacc7734d39b3d7b91bfb798c97d8b.png" title=" When I set the 'Bank Name' to 'Edited Bank Account Test Name'" width="1728"/>
+                <img src="1dde77f925a688f82eeee7609ec5581c9e0930aef7a2c9c77157516820cec33a.png" title=" When I set the 'Currency' to 'USD'" width="1728"/>
+                <img src="1c3efa7718205aeb3b6b4f52f560ad398b19cb19e1516e499daf549c429393ce.png" title=" When I set the 'Currency' to 'USD' (completed)" width="1728"/>
+                <img src="a2a7d84422e4e657182565fbfaa55409edc31200cce878879c013bf030b7e86f.png" title=" When I set the 'Customer Bank Account' to '1475920022'" width="1728"/>
+                <img src="c710534d7f44f557086e10781cce77290ed221816eec2e8e04cc14cd14e0b9f3.png" title=" When I set the 'Bank Address' to 'Makati'" width="1728"/>
+                <img src="b010d2547de92e1e129f920aca47e201370ff00fc0c8b13cd158f08bd76e8e31.png" title=" When I set the 'City' to 'Makati'" width="1728"/>
+                <img src="4f9941f756c7598807c42070243b4886c2a6a310f459de5ad35788f0e069b96b.png" title=" When I set the 'Country' to 'Philippines'" width="1728"/>
+                <img src="b29e8bf1de3cc9866c18c7408228de8edbc6b22bc750e1c231e9c97d78b8b9f1.png" title=" When I set the 'Country' to 'Philippines' (completed)" width="1728"/>
+                <img src="ab4cc8987924edbf3f0c220f97db47665ff65008866e17718c65bafd8520d22f.png" title=" When i click accordion continue button" width="1728"/>
+                <img src="ab4cc8987924edbf3f0c220f97db47665ff65008866e17718c65bafd8520d22f.png" title=" When i click accordion continue button (completed)" width="1728"/>
+                <img src="e53e28a19f1d02300be9468b3b1698a2f0f29f56469e3c41dbcf58d4ff3f8be2.png" title=" Then the payment instructions accordion form should be opened" width="1728"/>
+                <img src="bd7ad44ec2230794bbb3c9be9604f55ea8d25074dd8e150a9c6bf144de02e264.png" title=" When i click save button" width="1728"/>
+                <img src="3ee1432ab18461a9cf00b3d7e674ebbc93b217f23e5fb5c7ebc71538626c07d0.png" title=" When i click save button (completed)" width="1728"/>
+                <img src="3ee1432ab18461a9cf00b3d7e674ebbc93b217f23e5fb5c7ebc71538626c07d0.png" title=" Then the bank account edited successfully notification should show up: <span class='success-color'>SUCCESS</span>" width="1728"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>
