@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Selenium Serenity Tests FAD APPLIC</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ec572e583ea018bd9f8dfeb39b5a4c55a30f63d052fec60f26f4b5a9b4f3fc3f.html">Pre Registration</a></span>
+                > <span class="truncate-60"><a
+                    href="18ff40f4e488a2ded6c8fee308c1745852dbe5d4fc4be7cf3b3b0a4abbf8beab.html">Pre logging </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-12-2022 18:05</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Pre Registration </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Pre logging
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="7aac51439fc3738079bb38b1b33fab1c8872bbd314e88747f0dc147fb8ae9f2b.png" title=" Given that I'm logged in to PreLogging page" width="1728"/>
+                <img src="7aac51439fc3738079bb38b1b33fab1c8872bbd314e88747f0dc147fb8ae9f2b.png" title=" When i open FAD URL" width="1728"/>
+                <img src="7aac51439fc3738079bb38b1b33fab1c8872bbd314e88747f0dc147fb8ae9f2b.png" title=" When i open page from sidebar menu: {Accounts Payable,Pre-Registration,Pre-Logging}" width="1728"/>
+                <img src="25f79a3135c05672e936980d30aa3d754ae65449c5f9f760df9301e0d0e7d9d8.png" title=" When i open page from sidebar menu: {Accounts Payable,Pre-Registration,Pre-Logging}" width="1728"/>
+                <img src="692e43008519413b27df40eb662ea2b42afc87fcb977055dc6761d99e25846b3.png" title=" When i open page from sidebar menu: {Accounts Payable,Pre-Registration,Pre-Logging}" width="1728"/>
+                <img src="f94caa5683f34e77758108975de72d694a33126764ee7d73e3a143f455839226.png" title=" When i open page from sidebar menu: {Accounts Payable,Pre-Registration,Pre-Logging}" width="1728"/>
+                <img src="c2669a041dc118f4688e47cb98f918b3662f3d8d0ea9a90c3c1b2e3882445bf4.png" title=" When i open page from sidebar menu: {Accounts Payable,Pre-Registration,Pre-Logging} (completed)" width="1728"/>
+                <img src="c2669a041dc118f4688e47cb98f918b3662f3d8d0ea9a90c3c1b2e3882445bf4.png" title=" Given that I'm logged in to PreLogging page (completed)" width="1728"/>
+                <img src="c2669a041dc118f4688e47cb98f918b3662f3d8d0ea9a90c3c1b2e3882445bf4.png" title=" Then the 'Payment Information' form and its contents should show up" width="1728"/>
+                <img src="9ea154ff14dd7c9fc43d3b522df324a1cb5b46e834543b78bc8133b3ffa23fc3.png" title=" When I set the 'Supplier' to '25384'" width="1728"/>
+                <img src="0cbb5f030066f2098a8fe290c75f51bc20f9a7403f102e33690a4c050febecae.png" title=" When I set the 'Supplier' to '25384' (completed)" width="1728"/>
+                <img src="f5d7017a28d4e57ee1fbcf7f5ae45ca760e13243fb2860600429d6af30e5815f.png" title=" When I set the 'Invoice Number' to 'kaPEY2HnPY'" width="1728"/>
+                <img src="58c4d4b218089c2619c20b591b83f6bfd9e0a56282cfab1b3710a1a1e19cf299.png" title=" When I set the 'Currency' to 'USD'" width="1728"/>
+                <img src="e304013c256d5de092190c4065c1bca5102ba55ea8c0bde8ed0af512950eb710.png" title=" When I set the 'Currency' to 'USD' (completed)" width="1728"/>
+                <img src="9b8e6f0528e7d859dc94d5cd88214247a42dbc13c84a652638c4b9a867db6611.png" title=" When I click the 'Continue' button" width="1728"/>
+                <img src="0aa0f1a605eb4879c072ed3460a9e060e22ba86de4207eb90c2abd145a03c892.png" title=" When I click the 'Continue' button (completed)" width="1728"/>
+                <img src="ba1164e69f438621bff0f168732c654cc06b23c9f9181120c6b0fb88c8e8b974.png" title=" When I select the first Bank Account and click 'Submit' button if modal exist" width="1728"/>
+                <img src="97212e38ebdd213da7594781aabcbaf4c49660a8f24cad55577e331c2b9c2c11.png" title=" When I select the first Bank Account and click 'Submit' button if modal exist" width="1728"/>
+                <img src="38d645a7ebee5e6a659d986f69ad76213896e26594e323666af7dad2aa88b1d1.png" title=" When I select the first Bank Account and click 'Submit' button if modal exist (completed)" width="1728"/>
+                <img src="e4ed5d9b5c8447e3014da639d00a1339b7104bee92a250f245a7bf3fdc1145d3.png" title=" When I set the 'Gross Amount' to '10000'" width="1728"/>
+                <img src="208b75c773ba3c05058a0ab79bbf4080f102378d67f66e5a4ea238c7064d5dc8.png" title=" When I set the 'Payment Terms' to '40'" width="1728"/>
+                <img src="e0705ca99bb4bf065918058d0de777f912fb05a9501d4f8c8d65721cd44dcaa9.png" title=" When I set the 'Payment Terms' to '40'" width="1728"/>
+                <img src="4b2990566b814e1d5d4d1eec10f172e8c0a24b59db7c9311f457c1949bab2fc6.png" title=" When I set the 'Payment Terms' to '40' (completed)" width="1728"/>
+                <img src="a87138131ffa8f1dfb8302fab2050f060aa13ee4287638e472a0a3a4ac1fa60c.png" title=" When I set the 'Tax Area' to 'KF1'" width="1728"/>
+                <img src="e362d9d7730981adaa7ab2ad822f03691d83b905752585d18ed186474e6d2c4e.png" title=" When I set the 'Tax Area' to 'KF1'" width="1728"/>
+                <img src="29833bee70d37cd35d84ffdfd8127245d9e825454fdb896c45f8915a9459ddab.png" title=" When I set the 'Tax Area' to 'KF1' (completed)" width="1728"/>
+                <img src="86c49e27f81c1d9ed0f13777c0e5776739fcf78b5a49539cd7ef979cd4c655b6.png" title=" When I set the 'Tax Amount' to '1000'" width="1728"/>
+                <img src="f0a56f1eefbe6fc766ba56cbdb104e74e90ee7076aa33c7bfd0ddfaf824ecda1.png" title=" When I set the 'Discount Available' to '1000'" width="1728"/>
+                <img src="098621c817578069cd8b06124e2734fe3ac5cbdc3b7fa0a1e8044748bc49037a.png" title=" When I click the 'Continue' button" width="1728"/>
+                <img src="5da6da31fa0f08cd9059c018bd48aec066e42444814c46bb5414a6b7d6d77630.png" title=" When I click the 'Continue' button (completed)" width="1728"/>
+                <img src="422585d14f6b2368d560baf66ad34915fa725da787864cfe136e3c4ef251ad23.png" title=" Then the 'Preliminary Distribution Account' modal and its contents should show up" width="1728"/>
+                <img src="c1638cf9c8a7e7d97609e36753033f838cf9591100200cd36c2437bde6cf3050.png" title=" When I set the modal 'Description' to 'Test'" width="1728"/>
+                <img src="ce1316a3612f5af89f86e350ce127e15be8c2f909069d25e51096e97e385fb85.png" title=" When I click on 'Continue' button from modal" width="1728"/>
+                <img src="2590d9ff5fb464f554e907a5b37aeef9743a18803daa6310b5d0f005075255f5.png" title=" When I click on 'Continue' button from modal (completed)" width="1728"/>
+                <img src="2be141f141b334096aa00b4414311892f7114ac48aa5760a164540141cfd2537.png" title=" Then the 'Invoice Pre registration successfully created' modal should show up" width="1728"/>
+                <img src="8279be3ee3f3ef89f6b4aa59ef6ecb46dc5e0468b504a71db67601b2678c90cc.png" title=" When I click on 'Exit' button from modal" width="1728"/>
+                <img src="8279be3ee3f3ef89f6b4aa59ef6ecb46dc5e0468b504a71db67601b2678c90cc.png" title=" When I click on 'Exit' button from modal (completed): <span class='success-color'>SUCCESS</span>" width="1728"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>
